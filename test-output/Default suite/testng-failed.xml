@@ -9,7 +9,7 @@
     <classes>
       <class name="tests.loginTest">
         <methods>
-          <include name="verifyLoginWithInvalidCredentials"/>
+          <include name="verifyLoginWithInvalidCredentials" invocation-numbers="0"/>
           <include name="tearDown"/>
           <include name="launchFireFox"/>
         </methods>

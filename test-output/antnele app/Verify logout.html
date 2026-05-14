@@ -57,9 +57,9 @@ function toggleAllBoxes() {
 <tr>
 <td>Tests passed/Failed/Skipped:</td><td>0/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Thu May 14 19:01:06 IST 2026</td>
+<td>Started on:</td><td>Thu May 14 22:29:12 IST 2026</td>
 </tr>
-<tr><td>Total time:</td><td>37 seconds (37521 ms)</td>
+<tr><td>Total time:</td><td>7 seconds (7492 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -75,46 +75,50 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='tests.LogoutTest.tearDown()'><b>tearDown</b><br>Test class: tests.LogoutTest<br>Parameters: [TestResult name=verifyLogoutFlow status=FAILURE method=LogoutTest.verifyLogoutFlow()[pri:0, instance:tests.LogoutTest@18078bef] output={null}]</td>
-<td><div><pre>org.openqa.selenium.UnsupportedCommandException: HTTP method not allowed
-Command duration or timeout: 15 milliseconds
+<td title='tests.LogoutTest.tearDown()'><b>tearDown</b><br>Test class: tests.LogoutTest<br>Parameters: [TestResult name=verifyLogoutFlow status=FAILURE method=LogoutTest.verifyLogoutFlow()[pri:0, instance:tests.LogoutTest@47eaca72] output={null}]</td>
+<td><div><pre>org.openqa.selenium.NoSuchSessionException: WebDriver session does not exist, or is not active
 Build info: version: &apos;4.14.0&apos;, revision: &apos;e5a96349ce&apos;
 System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.6&apos;
 Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Command: [3dbad37f-9160-486e-a957-abab0f2f6dea, getLog {type=browser}]
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 150.0.2, moz:accessibilityChecks: false, moz:buildID: 20260506140522, moz:geckodriverVersion: 0.36.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 32204, moz:profile: C:\Users\akhil\AppData\Loca..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, userAgent: Mozilla/5.0 (Windows NT 10....}
-Session ID: 3dbad37f-9160-486e-a957-abab0f2f6dea
-	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:220)
-	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:169)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:655)
+Command: [eb9850e1-6dfa-49fb-acf7-cb96c9d36055, screenshot {}]
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 150.0.2, moz:accessibilityChecks: false, moz:buildID: 20260506140522, moz:geckodriverVersion: 0.36.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 15324, moz:profile: C:\Users\akhil\AppData\Loca..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, userAgent: Mozilla/5.0 (Windows NT 10....}
+Session ID: eb9850e1-6dfa-49fb-acf7-cb96c9d36055
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:196)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:171)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:602)
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:675)
-	at org.openqa.selenium.remote.RemoteExecuteMethod.execute(RemoteExecuteMethod.java:39)
-	at org.openqa.selenium.remote.RemoteLogs.getRemoteEntries(RemoteLogs.java:78)
-	at org.openqa.selenium.remote.RemoteLogs.get(RemoteLogs.java:74)
-	at main.Utils.tearDown(Utils.java:67)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:679)
+	at org.openqa.selenium.remote.RemoteWebDriver.getScreenshotAs(RemoteWebDriver.java:325)
+	at main.Utils.tearDown(Utils.java:82)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-... Removed 37 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace948315053", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace948315053'><pre>org.openqa.selenium.UnsupportedCommandException: HTTP method not allowed
-Command duration or timeout: 15 milliseconds
+... Removed 37 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1614238", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1614238'><pre>org.openqa.selenium.NoSuchSessionException: WebDriver session does not exist, or is not active
 Build info: version: &apos;4.14.0&apos;, revision: &apos;e5a96349ce&apos;
 System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.6&apos;
 Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Command: [3dbad37f-9160-486e-a957-abab0f2f6dea, getLog {type=browser}]
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 150.0.2, moz:accessibilityChecks: false, moz:buildID: 20260506140522, moz:geckodriverVersion: 0.36.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 32204, moz:profile: C:\Users\akhil\AppData\Loca..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, userAgent: Mozilla/5.0 (Windows NT 10....}
-Session ID: 3dbad37f-9160-486e-a957-abab0f2f6dea
+Command: [eb9850e1-6dfa-49fb-acf7-cb96c9d36055, screenshot {}]
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 150.0.2, moz:accessibilityChecks: false, moz:buildID: 20260506140522, moz:geckodriverVersion: 0.36.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 15324, moz:profile: C:\Users\akhil\AppData\Loca..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, userAgent: Mozilla/5.0 (Windows NT 10....}
+Session ID: eb9850e1-6dfa-49fb-acf7-cb96c9d36055
 	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
 	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
 	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
-	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:220)
-	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:169)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:655)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:196)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:171)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:602)
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:675)
-	at org.openqa.selenium.remote.RemoteExecuteMethod.execute(RemoteExecuteMethod.java:39)
-	at org.openqa.selenium.remote.RemoteLogs.getRemoteEntries(RemoteLogs.java:78)
-	at org.openqa.selenium.remote.RemoteLogs.get(RemoteLogs.java:74)
-	at main.Utils.tearDown(Utils.java:67)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:679)
+	at org.openqa.selenium.remote.RemoteWebDriver.getScreenshotAs(RemoteWebDriver.java:325)
+	at main.Utils.tearDown(Utils.java:82)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -150,7 +154,7 @@ Session ID: 3dbad37f-9160-486e-a957-abab0f2f6dea
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
 </pre></div></td>
 <td>0</td>
-<td>tests.LogoutTest@18078bef</td></tr>
+<td>tests.LogoutTest@47eaca72</td></tr>
 </table><p>
 <table width='100%' border='1' class='invocation-failed'>
 <tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
@@ -161,14 +165,13 @@ Session ID: 3dbad37f-9160-486e-a957-abab0f2f6dea
 </tr>
 <tr>
 <td title='tests.LogoutTest.verifyLogoutFlow()'><b>verifyLogoutFlow</b><br>Test class: tests.LogoutTest</td>
-<td><div><pre>org.openqa.selenium.ElementNotInteractableException: Element &lt;a id=&quot;logout_sidebar_link&quot; class=&quot;bm-item menu-item&quot; href=&quot;#&quot;&gt; could not be scrolled into view
+<td><div><pre>org.openqa.selenium.NoSuchSessionException: WebDriver session does not exist, or is not active
 Build info: version: &apos;4.14.0&apos;, revision: &apos;e5a96349ce&apos;
 System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.6&apos;
 Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Command: [3dbad37f-9160-486e-a957-abab0f2f6dea, clickElement {id=7b62f4ec-3c42-48b4-aabe-2cc53879e7b0}]
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 150.0.2, moz:accessibilityChecks: false, moz:buildID: 20260506140522, moz:geckodriverVersion: 0.36.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 32204, moz:profile: C:\Users\akhil\AppData\Loca..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, userAgent: Mozilla/5.0 (Windows NT 10....}
-Element: [[FirefoxDriver: firefox on windows (3dbad37f-9160-486e-a957-abab0f2f6dea)] -&gt; xpath: //a[@id=&apos;logout_sidebar_link&apos;]]
-Session ID: 3dbad37f-9160-486e-a957-abab0f2f6dea
+Command: [eb9850e1-6dfa-49fb-acf7-cb96c9d36055, findElement {using=id, value=user-name}]
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 150.0.2, moz:accessibilityChecks: false, moz:buildID: 20260506140522, moz:geckodriverVersion: 0.36.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 15324, moz:profile: C:\Users\akhil\AppData\Loca..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, userAgent: Mozilla/5.0 (Windows NT 10....}
+Session ID: eb9850e1-6dfa-49fb-acf7-cb96c9d36055
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
@@ -176,22 +179,24 @@ Session ID: 3dbad37f-9160-486e-a957-abab0f2f6dea
 	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:196)
 	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:171)
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:602)
-	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:224)
-	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:77)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
-	at jdk.proxy2/jdk.proxy2.$Proxy15.click(Unknown Source)
-	at pom_files.LogoutPagePOM.clickLogoutButton(LogoutPagePOM.java:35)
-	at tests.LogoutTest.verifyLogoutFlow(LogoutTest.java:25)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:66)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:359)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:353)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy15.sendKeys(Unknown Source)
+	at pom_files.Login_Page_POM.enterValidUsername(Login_Page_POM.java:57)
+	at tests.LogoutTest.verifyLogoutFlow(LogoutTest.java:17)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-... Removed 36 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1739806152", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1739806152'><pre>org.openqa.selenium.ElementNotInteractableException: Element &lt;a id=&quot;logout_sidebar_link&quot; class=&quot;bm-item menu-item&quot; href=&quot;#&quot;&gt; could not be scrolled into view
+... Removed 32 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1086508626", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1086508626'><pre>org.openqa.selenium.NoSuchSessionException: WebDriver session does not exist, or is not active
 Build info: version: &apos;4.14.0&apos;, revision: &apos;e5a96349ce&apos;
 System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.6&apos;
 Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Command: [3dbad37f-9160-486e-a957-abab0f2f6dea, clickElement {id=7b62f4ec-3c42-48b4-aabe-2cc53879e7b0}]
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 150.0.2, moz:accessibilityChecks: false, moz:buildID: 20260506140522, moz:geckodriverVersion: 0.36.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 32204, moz:profile: C:\Users\akhil\AppData\Loca..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, userAgent: Mozilla/5.0 (Windows NT 10....}
-Element: [[FirefoxDriver: firefox on windows (3dbad37f-9160-486e-a957-abab0f2f6dea)] -&gt; xpath: //a[@id=&apos;logout_sidebar_link&apos;]]
-Session ID: 3dbad37f-9160-486e-a957-abab0f2f6dea
+Command: [eb9850e1-6dfa-49fb-acf7-cb96c9d36055, findElement {using=id, value=user-name}]
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 150.0.2, moz:accessibilityChecks: false, moz:buildID: 20260506140522, moz:geckodriverVersion: 0.36.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 15324, moz:profile: C:\Users\akhil\AppData\Loca..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, userAgent: Mozilla/5.0 (Windows NT 10....}
+Session ID: eb9850e1-6dfa-49fb-acf7-cb96c9d36055
 	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
@@ -204,16 +209,15 @@ Session ID: 3dbad37f-9160-486e-a957-abab0f2f6dea
 	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:196)
 	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:171)
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:602)
-	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:224)
-	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:77)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
-	at jdk.proxy2/jdk.proxy2.$Proxy15.click(Unknown Source)
-	at pom_files.LogoutPagePOM.clickLogoutButton(LogoutPagePOM.java:35)
-	at tests.LogoutTest.verifyLogoutFlow(LogoutTest.java:25)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:66)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:359)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:353)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy15.sendKeys(Unknown Source)
+	at pom_files.Login_Page_POM.enterValidUsername(Login_Page_POM.java:57)
+	at tests.LogoutTest.verifyLogoutFlow(LogoutTest.java:17)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -243,8 +247,8 @@ Session ID: 3dbad37f-9160-486e-a957-abab0f2f6dea
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
 </pre></div></td>
-<td>1</td>
-<td>tests.LogoutTest@18078bef</td></tr>
+<td>0</td>
+<td>tests.LogoutTest@47eaca72</td></tr>
 </table><p>
 </body>
 </html>

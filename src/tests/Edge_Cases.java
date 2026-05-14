@@ -1,6 +1,7 @@
 package tests;
 
 import org.testng.Assert;
+import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 import main.Utils;
@@ -8,6 +9,7 @@ import pom_files.Login_Page_POM;
 
 public class Edge_Cases extends Utils{
 
+	@Parameters({"emptyUsername", "validPassword"})
 	@Test
 	public void verifyLoginWithEmpty_Username(String emptyUsername, String validPassword) {
 		Login_Page_POM loginPgae = new Login_Page_POM(driver);
@@ -20,6 +22,7 @@ public class Edge_Cases extends Utils{
         );
 	}
 	
+	@Parameters({"validUsername", "emptyPassword"})
 	@Test
 	public void emptyPasswordTest(String validUsername, String emptyPassword) {
 		Login_Page_POM loginPgae = new Login_Page_POM(driver);
@@ -31,6 +34,7 @@ public class Edge_Cases extends Utils{
 		
 	}
 	
+	@Parameters({"emptyUsername", "emptyPassword"})
 	@Test
 	public void emptyUsernameAndPasswordTest(String emptyUsername, String emptyPassword) {
 		Login_Page_POM loginPgae = new Login_Page_POM(driver);
@@ -41,6 +45,7 @@ public class Edge_Cases extends Utils{
 		Assert.assertTrue(loginPgae.getErrorMessage().contains("Username is required"));
 	}
 	
+	@Parameters({"spacialCharacterUsername", "specialCharacterPassword"})
 	@Test
 	public void specialCharactersLoginTest(String specialCharacters, String SpecialCharacterPassword) {
 		Login_Page_POM loginPgae = new Login_Page_POM(driver);

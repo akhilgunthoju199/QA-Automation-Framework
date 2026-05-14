@@ -37,6 +37,7 @@ public class DashboardTest extends Utils{
         Assert.assertTrue(dashboard.areProductCardsVisible());
 
         Assert.assertTrue(dashboard.isUserActionButtonVisible());
+        System.out.println("DashBoard is successfully tested");
     }
 }
 

@@ -39,10 +39,10 @@ public class Login_Page_POM extends Utils {
 	@FindBy(xpath = "//div[@class='inventory_item']")
 	private List<WebElement> productList;
 	
-	@FindBy(xpath="//*[@id=\"login_button_container\"]/div/form/div[3]/h3/text()")
+	@FindBy(xpath="//h3[contains(text(), 'is required') or contains(text(), 'Username and password do not match')]")
 	private WebElement errorMessage;
 	
-	@FindBy(xpath="//h3[text()='Epic sadface: Username is required']")
+	@FindBy(xpath="//h3[contains(text(), 'is required') or contains(text(), 'Username and password do not match')]")
 	private WebElement errorMessageForRequiredFields;
 	
 	

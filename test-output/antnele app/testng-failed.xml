@@ -28,29 +28,4 @@
       </class> <!-- tests.loginTest -->
     </classes>
   </test> <!-- Verify login with invalid credentials(failed) -->
-  <test thread-count="5" name="Verify logout(failed)">
-    <classes>
-      <class name="tests.LogoutTest">
-        <methods>
-          <include name="verifyLogoutFlow"/>
-          <include name="tearDown"/>
-          <include name="launchFireFox"/>
-        </methods>
-      </class> <!-- tests.LogoutTest -->
-    </classes>
-  </test> <!-- Verify logout(failed) -->
-  <test thread-count="5" name="verify Edge Cases(failed)">
-    <classes>
-      <class name="tests.Edge_Cases">
-        <methods>
-          <include name="specialCharactersLoginTest"/>
-          <include name="tearDown"/>
-          <include name="launchFireFox"/>
-          <include name="emptyUsernameAndPasswordTest"/>
-          <include name="emptyPasswordTest"/>
-          <include name="verifyLoginWithEmpty_Username"/>
-        </methods>
-      </class> <!-- tests.Edge_Cases -->
-    </classes>
-  </test> <!-- verify Edge Cases(failed) -->
 </suite> <!-- Failed suite [antnele app] -->

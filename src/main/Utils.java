@@ -18,7 +18,6 @@ import org.testng.annotations.BeforeMethod;
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class Utils {
-//	public static WebDriver launchChrome()
 	
 	public static WebDriver driver;
 	
@@ -32,46 +31,25 @@ public class Utils {
         driver.manage().deleteAllCookies();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
         driver.get("https://www.saucedemo.com/");
-        //Thread.sleep(7000);
 
 	}
 	
-//	@BeforeTest
-//	public void login() throws InterruptedException {
-//		login_pom loginPom = new login_pom(driver);
-//		loginPom.launchApp("Admin", "admin123");
-//		Assert.assertTrue(loginPom.dashboard.isDisplayed());
-//		System.out.println("login is successfully with valid credentials");
-//	}
 	
-//	@AfterMethod
-//	public void closeApp() {
-//		if(driver!=null) {
-//		driver.quit();
-//		}
-		
-		@AfterMethod
-		public void tearDown(ITestResult result) throws IOException {
+	@AfterMethod
+	public void tearDown(ITestResult result) throws IOException {
 
-	        if (result.getStatus() == ITestResult.FAILURE) {
+	    if (result.getStatus() == ITestResult.FAILURE) {
 
-	            File src = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
+	        File src = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
 
-	            File dest = new File("screenshots/" + result.getName() + ".png");
+	        File dest = new File("screenshots/" + result.getName() + ".png");
 
-	            FileUtils.copyFile(src, dest);
+	        FileUtils.copyFile(src, dest);
 
-	            System.out.println("Screenshot captured for failed test: " + result.getName());
-	        }
+	        System.out.println("Screenshot captured for failed test: " + result.getName());
+	    }
 
-	        List<LogEntry> logs = driver.manage().logs().get(LogType.BROWSER).getAll();
-
-	        for (LogEntry log : logs) {
-
-	            System.out.println("Console Log: " + log.getLevel() + " - " + log.getMessage());
-	        }
-
-	        driver.quit();
+	    driver.quit();
 	}
 	
 	

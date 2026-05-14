@@ -26,6 +26,12 @@
 	</test>
 	
 	<test name="verify Edge Cases">
+		<parameter name="validUsername" value="standard_user"></parameter>
+		<parameter name="emptyUsername" value=""></parameter>
+		<parameter name="emptyPassword" value=""></parameter>
+		<parameter name="validPassword" value="secret_sauce"></parameter>
+		<parameter name="spacialCharacterUsername" value="standard@!@#@"></parameter>
+		<parameter name="specialCharacterPassword" value="AK@%@%^@"></parameter>
 		<classes>
 			<class name="tests.Edge_Cases"></class>
 		</classes>
