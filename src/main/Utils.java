@@ -1,0 +1,78 @@
+package main;
+
+import java.io.File;
+import java.io.IOException;
+import java.time.Duration;
+import java.util.List;
+
+import org.apache.commons.io.FileUtils;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.logging.LogType;
+import org.openqa.selenium.logging.LogEntry;
+import org.testng.ITestResult;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
+import io.github.bonigarcia.wdm.WebDriverManager;
+
+public class Utils {
+//	public static WebDriver launchChrome()
+	
+	public static WebDriver driver;
+	
+	@BeforeMethod
+	public void launchFireFox() throws InterruptedException
+	{
+
+		WebDriverManager.firefoxdriver().setup();
+        driver = new FirefoxDriver();
+        driver.manage().window().maximize();
+        driver.manage().deleteAllCookies();
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+        driver.get("https://www.saucedemo.com/");
+        //Thread.sleep(7000);
+
+	}
+	
+//	@BeforeTest
+//	public void login() throws InterruptedException {
+//		login_pom loginPom = new login_pom(driver);
+//		loginPom.launchApp("Admin", "admin123");
+//		Assert.assertTrue(loginPom.dashboard.isDisplayed());
+//		System.out.println("login is successfully with valid credentials");
+//	}
+	
+//	@AfterMethod
+//	public void closeApp() {
+//		if(driver!=null) {
+//		driver.quit();
+//		}
+		
+		@AfterMethod
+		public void tearDown(ITestResult result) throws IOException {
+
+	        if (result.getStatus() == ITestResult.FAILURE) {
+
+	            File src = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
+
+	            File dest = new File("screenshots/" + result.getName() + ".png");
+
+	            FileUtils.copyFile(src, dest);
+
+	            System.out.println("Screenshot captured for failed test: " + result.getName());
+	        }
+
+	        List<LogEntry> logs = driver.manage().logs().get(LogType.BROWSER).getAll();
+
+	        for (LogEntry log : logs) {
+
+	            System.out.println("Console Log: " + log.getLevel() + " - " + log.getMessage());
+	        }
+
+	        driver.quit();
+	}
+	
+	
+}

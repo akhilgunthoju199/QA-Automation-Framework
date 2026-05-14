@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [antnele app]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="Verify Login with valid credentials(failed)">
+    <parameter name="Username" value="standard_user"/>
+    <parameter name="Password" value="secret_sauce"/>
+    <classes>
+      <class name="tests.loginTest">
+        <methods>
+          <include name="verifyLoginWithInvalidCredentials"/>
+          <include name="tearDown"/>
+          <include name="launchFireFox"/>
+        </methods>
+      </class> <!-- tests.loginTest -->
+    </classes>
+  </test> <!-- Verify Login with valid credentials(failed) -->
+  <test thread-count="5" name="Verify login with invalid credentials(failed)">
+    <parameter name="InvalidUsername" value="wrong"/>
+    <parameter name="InvalidPassword" value="secret_sauce"/>
+    <classes>
+      <class name="tests.loginTest">
+        <methods>
+          <include name="verifyLoginWithInvalidCredentials" invocation-numbers="0"/>
+          <include name="tearDown"/>
+          <include name="launchFireFox"/>
+          <include name="verifyLoginWithValidCredentials"/>
+        </methods>
+      </class> <!-- tests.loginTest -->
+    </classes>
+  </test> <!-- Verify login with invalid credentials(failed) -->
+  <test thread-count="5" name="Verify logout(failed)">
+    <classes>
+      <class name="tests.LogoutTest">
+        <methods>
+          <include name="verifyLogoutFlow"/>
+          <include name="tearDown"/>
+          <include name="launchFireFox"/>
+        </methods>
+      </class> <!-- tests.LogoutTest -->
+    </classes>
+  </test> <!-- Verify logout(failed) -->
+  <test thread-count="5" name="verify Edge Cases(failed)">
+    <classes>
+      <class name="tests.Edge_Cases">
+        <methods>
+          <include name="specialCharactersLoginTest"/>
+          <include name="tearDown"/>
+          <include name="launchFireFox"/>
+          <include name="emptyUsernameAndPasswordTest"/>
+          <include name="emptyPasswordTest"/>
+          <include name="verifyLoginWithEmpty_Username"/>
+        </methods>
+      </class> <!-- tests.Edge_Cases -->
+    </classes>
+  </test> <!-- verify Edge Cases(failed) -->
+</suite> <!-- Failed suite [antnele app] -->
