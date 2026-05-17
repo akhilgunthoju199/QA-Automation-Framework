@@ -10,7 +10,6 @@ import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.logging.LogType;
 import org.openqa.selenium.logging.LogEntry;
 import org.testng.ITestResult;
@@ -27,12 +26,7 @@ public class Utils {
 	{
 
 		WebDriverManager.firefoxdriver().setup();
-		//new
-		FirefoxOptions options = new FirefoxOptions();
-		options.addArguments("--headless");
-		driver = new FirefoxDriver(options);
-		//end
-        //driver = new FirefoxDriver();
+        driver = new FirefoxDriver();
         driver.manage().window().maximize();
         driver.manage().deleteAllCookies();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
